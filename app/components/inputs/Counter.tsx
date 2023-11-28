@@ -6,8 +6,8 @@ import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 interface CounterProps {
   title: string;
   subtitle: string;
-  value: string;
-  onChange: (value: string) => void;
+  value: number;
+  onChange: (value: number) => void;
 }
 
 const Counter: React.FC<CounterProps> = ({
@@ -26,7 +26,7 @@ const Counter: React.FC<CounterProps> = ({
     }
 
     onChange(value - 1);
-  }, [value, onChange]);
+  }, [onChange, value]);
   return (
     <div className="flex flex-row items-center justify-between">
       <div className="flex flex-col">
